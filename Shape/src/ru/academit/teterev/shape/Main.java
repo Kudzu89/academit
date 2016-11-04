@@ -26,9 +26,12 @@ public class Main {
             }
 
         }
-        System.out.println("Максимальное значение площади фигур = " + maxValue);
-        System.out.println("Второе значение площади после максимального = " + theSecondLargest);
-        System.out.printf("квадрат %2f ");
+        System.out.printf("Максимальное значение площади у фигуры = %.2f%n", maxValue);
+        System.out.printf("Второе значение площади после максимального = %.2f%n%n",theSecondLargest);
+        System.out.printf("Квадрат: %n ширина %.2f%n высота %.2f%n площадь %.2f%n периметр %.2f%n%n", square1.getWidth(), square1.getHeight(), square1.getArea(), square1.getPerimeter());
+        System.out.printf("Треугольник: %n ширина %.2f%n высота %.2f%n площадь %.2f%n периметр %.2f%n%n", triangle1.getWidth(), triangle1.getHeight(), triangle1.getArea(), triangle1.getPerimeter());
+        System.out.printf("Окружность: %n ширина %.2f%n высота %.2f%n площадь %.2f%n периметр %.2f%n%n", circle1.getWidth(), circle1.getHeight(), circle1.getArea(), circle1.getPerimeter());
+        System.out.printf("Прямоугольник: %n ширина %.2f%n высота %.2f%n площадь %.2f%n периметр %.2f%n%n", rectangle1.getWidth(), rectangle1.getHeight(), rectangle1.getArea(), rectangle1.getPerimeter());
     }
 
 }
