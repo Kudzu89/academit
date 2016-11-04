@@ -1,27 +1,34 @@
 package ru.academit.teterev.shape;
 
+import java.util.Arrays;
+
 public class Main {
 
-    getMaxArea(double area) {
+    public static void main(String[] args) {
 
+        Square square1 = new Square(20);
+        Triangle triangle1 = new Triangle(40, 20, 30, 60, 20, 40, 80);
+        Circle circle1 = new Circle(50);
+        Rectangle rectangle1 = new Rectangle(60, 80);
+
+        double[] arrayOfAreas = {square1.getArea(), triangle1.getArea(), circle1.getArea(), rectangle1.getArea()};
+        //System.out.println(Arrays.toString(arrayOfAreas));              /*Просмотреть массив*/
+
+        double maxValue = arrayOfAreas[0];
+        double theSecondLargest = arrayOfAreas[0];
+        for (int i = 1; i < arrayOfAreas.length; i++) {
+            if (arrayOfAreas[i] > theSecondLargest) {
+                if (arrayOfAreas[i] > maxValue) {
+                    maxValue = arrayOfAreas[i];
+                } else {
+                    theSecondLargest = arrayOfAreas[i];
+                }
+            }
+
+        }
+        System.out.println("Максимальное значение площади фигур = " + maxValue);
+        System.out.println("Второе значение площади после максимального = " + theSecondLargest);
+        System.out.printf("квадрат %2f ");
     }
-
-
-    Square square1 = new Square(20);
-
-    Square square2 = new Square(40);
-
-    Triangle triangle1 = new Triangle(12, 10, 11, 22, 16, 7, 10);
-
-    Triangle triangle2 = new Triangle(2, 9, 2, 11, 4, 16, 2);
-
-    Rectangle rectangle1 = new Rectangle(22, 44);
-
-    Rectangle rectangle2 = new Rectangle(30, 50);
-
-    Circle circle1 = new Circle(55);
-
-    Circle circle2 = new Circle(80);
-
 
 }
